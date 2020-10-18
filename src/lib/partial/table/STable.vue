@@ -9,11 +9,9 @@
 </template>
 
 <script>
-    import {Table} from 'ant-design-vue'
 
     export default {
         name: "STable",
-        components: {ATable: Table},
         props: {
             config: Object
         },

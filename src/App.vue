@@ -60,6 +60,11 @@
                     name: '菜单布局',
                     noPad: true,
                     key: 'MenuContainer'
+                },
+                {
+                    name: '标签布局',
+                    noPad: true,
+                    key: 'TabContainer'
                 }
             ]
         }

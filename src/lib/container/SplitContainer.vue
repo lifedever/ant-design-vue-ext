@@ -20,7 +20,7 @@
 </template>
 
 <script>
-    import Split from "@/lib/partial/split-pane/split";
+    import Split from "../partial/split-pane/split";
 
     export default {
         name: "SplitContainer",

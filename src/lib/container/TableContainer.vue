@@ -50,13 +50,11 @@
 </template>
 
 <script>
-    import {Pagination} from 'ant-design-vue'
-    import {clearObj} from "@/lib/util/tools";
+    import {clearObj} from "../util/tools";
 
     export default {
         name: "TableContainer",
         components: {
-            APagination: Pagination
         },
         props: {
             url: String,

@@ -16,12 +16,10 @@
 </template>
 
 <script>
-    import {Tabs} from 'ant-design-vue'
 
     export default {
         name: "TabContainer",
         components: {
-            [Tabs.name]: Tabs
         },
         data() {
             return {
@@ -51,7 +49,10 @@
         },
         methods: {
             routeTab() {
-                let query = Object.assign({}, this.$route.query)
+                if (!this.$router) {
+                    return false
+                }
+                let query = Object.assign({}, this.$route.query);
                 query._t = this.current
                 this.$router.push({
                     query

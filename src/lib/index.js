@@ -1,12 +1,12 @@
 import VueBus from "vue-bus";
-import BaseContainer from "@/lib/container/BaseContainer";
-import SplitContainer from "@/lib/container/SplitContainer";
-import TabContainer from "@/lib/container/TabContainer";
-import TableContainer from "@/lib/container/TableContainer";
-import TreeContainer from "@/lib/container/TreeContainer";
+import BaseContainer from "./container/BaseContainer";
+import SplitContainer from "./container/SplitContainer";
+import TabContainer from "./container/TabContainer";
+import TableContainer from "./container/TableContainer";
+import TreeContainer from "./container/TreeContainer";
 
-import STable from "@/lib/partial/table/STable";
-import STableColumn from "@/lib/partial/table/STableColumn";
+import STable from "./partial/table/STable";
+import STableColumn from "./partial/table/STableColumn";
 
 import './less/index.less'
 export default {

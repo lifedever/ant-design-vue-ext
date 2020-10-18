@@ -38,7 +38,7 @@
 
 <script>
     import _merge from 'lodash/merge'
-    import {clearObj} from "@/lib/util/tools";
+    import {clearObj} from "../util/tools";
 
     export default {
         name: "TreeContainer",
@@ -69,6 +69,12 @@
                 type: [Number, String],
                 default: '250px'
             },
+            httpInstance: {
+                type: Object,
+                default(){
+                    return this.$http
+                }
+            }
         },
         data() {
             return {
@@ -203,7 +209,7 @@
             },
             loadData() {
                 return new Promise((resolve, reject) => {
-                    this.$http.get(this.url, {
+                    this.httpInstance.get(this.url, {
                         params: clearObj({
                             key: this.key,
                             parent: this.parent
