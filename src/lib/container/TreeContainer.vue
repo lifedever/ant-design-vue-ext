@@ -1,5 +1,8 @@
 <template>
-    <split-container v-model="split" :hideHeader="hideHeader">
+    <split-container v-model="split">
+        <template slot="headerLeft">
+            <slot name="headerLeft"></slot>
+        </template>
         <template v-slot:headerRight>
             <slot name="headerRight"></slot>
         </template>

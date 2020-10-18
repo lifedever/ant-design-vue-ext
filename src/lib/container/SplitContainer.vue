@@ -1,7 +1,9 @@
 <template>
     <base-container class="split-container"
-                    v-bind="$props"
-                    :hideHeader="hideHeader">
+                    v-bind="$props">
+        <template slot="headerLeft">
+            <slot name="headerLeft"></slot>
+        </template>
         <template v-slot:headerRight>
             <slot name="headerRight"></slot>
         </template>

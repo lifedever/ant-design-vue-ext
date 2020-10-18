@@ -2,9 +2,11 @@
     <base-container class="table-container"
                     :title="title"
                     ref="baseRef"
-                    :hide-header="hideHeader"
                     :hide-index="hideIndex"
                     @headerDbClick="loadData">
+        <template slot="headerLeft">
+            <slot name="headerLeft"></slot>
+        </template>
         <template v-slot:headerRight>
             <slot name="headerRight"></slot>
         </template>

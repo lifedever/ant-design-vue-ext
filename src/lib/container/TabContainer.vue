@@ -1,8 +1,9 @@
 <template>
     <base-container
-        v-bind="$props"
-        :class="['tab-container', hideHeader? 'tab-container-hide-header': '']"
-    >
+        v-bind="$props">
+        <template slot="headerLeft">
+            <slot name="headerLeft"></slot>
+        </template>
         <a-tabs v-model="current" :animated="false" @change="tabChange" :tabPosition="tabPosition">
             <template>
                 <slot></slot>

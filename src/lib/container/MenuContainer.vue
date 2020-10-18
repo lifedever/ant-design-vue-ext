@@ -2,6 +2,9 @@
     <base-container
         v-bind="$props"
         class="menu-container">
+        <template slot="headerLeft">
+            <slot name="headerLeft"></slot>
+        </template>
         <div slot="sider">
             <a-menu mode="inline" v-bind="menuConfig">
                 <template v-for="menu in menus">
