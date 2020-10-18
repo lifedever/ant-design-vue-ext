@@ -50,6 +50,11 @@
                     name: '表格布局',
                     noPad: true,
                     key: 'TableContainer'
+                },
+                {
+                    name: '树布局',
+                    noPad: true,
+                    key: 'TreeContainer'
                 }
             ]
         }

@@ -79,7 +79,9 @@
                 parent: null,
                 key: null,
                 gData: [],
-                defaultConfig: {}
+                defaultConfig: {
+                    replaceFields: {children: 'children', title: 'title', key: 'id'}
+                }
             }
         },
         computed: {
@@ -92,7 +94,7 @@
                     showLine: false,
                     showIcon: this.showIcon,
                     draggable: false,
-                    asyncLoad: true,            // 异步树
+                    asyncLoad: false,            // 异步树
                     // searchable: true
                 }
             }
