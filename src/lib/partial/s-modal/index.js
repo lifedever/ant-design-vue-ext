@@ -1,5 +1,8 @@
+import VueBus from 'vue-bus'
+
 export default {
-    install: (Vue, options) => {
+    install: (Vue) => {
+        Vue.use(VueBus)
         let $bus = new Vue().$bus
         Vue.prototype.$openModal = (view) => {
             $bus.emit('bus_openModal', view)
