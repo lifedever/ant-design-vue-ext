@@ -45,6 +45,11 @@
                     name: '分割布局',
                     noPad: true,
                     key: 'SplitContainer'
+                },
+                {
+                    name: '表格布局',
+                    noPad: true,
+                    key: 'TableContainer'
                 }
             ]
         }

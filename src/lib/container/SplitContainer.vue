@@ -20,14 +20,11 @@
 </template>
 
 <script>
-    import '@/lib/less/split-container.less'
-    import BaseContainer from "@/lib/container/BaseContainer";
     import Split from "@/lib/partial/split-pane/split";
 
     export default {
         name: "SplitContainer",
         components: {
-            BaseContainer,
             Split,
         },
         data(){

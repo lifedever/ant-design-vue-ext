@@ -1,16 +1,21 @@
 <template>
     <split-container hide-header value="200px">
-        <pre>
-import SplitContainer from "@/lib/container/SplitContainer";
-        </pre>
+        <div slot="left" class="pad">
+            数据啊
+            数据啊
+            数据啊
+            数据啊
+            数据啊
+            数据啊
+        </div>
+        <table-container-example slot="right"/>
     </split-container>
 </template>
 
 <script>
-    import SplitContainer from "@/lib/container/SplitContainer";
+
     export default {
         name: "SplitContainerExample",
-        components: {SplitContainer}
     }
 </script>
 

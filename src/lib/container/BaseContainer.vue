@@ -29,8 +29,6 @@
 </template>
 
 <script>
-    import '../less/base-container.less'
-
     export default {
         name: "BaseContainer",
         components: {
