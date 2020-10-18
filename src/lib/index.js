@@ -7,7 +7,7 @@ import TreeContainer from "./container/TreeContainer";
 import STable from "./partial/table/STable";
 import STableColumn from "./partial/table/STableColumn";
 
-import SModal from "@/lib/partial/s-modal";
+import SModal from "./partial/s-modal";
 
 import './less/index.less'
 
