@@ -29,27 +29,12 @@
 </template>
 
 <script>
+    import BaseProps from './base-props'
+
     export default {
         name: "BaseContainer",
-        components: {
-
-        },
-        props: {
-            hideHeader: Boolean,
-            title: String,
-            transparent: Boolean,
-            siderConfig:{
-                type: Object,
-                default(){
-                    return {
-                        style: {
-                            background: '#fff'
-                        }
-                    }
-                }
-            },
-            noPad: Boolean
-        },
+        components: {},
+        props: BaseProps,
         mounted() {
         },
         computed: {},

@@ -39,13 +39,13 @@
 <script>
     import _merge from 'lodash/merge'
     import {clearObj} from "../util/tools";
+    import BaseProps from './base-props'
 
     export default {
         name: "TreeContainer",
-        props: {
+        props: Object.assign({}, BaseProps, {
             url: String,
             data: Array,
-            hideHeader: Boolean,
             value: Array,
             expandedKeys: {
                 type: Array,
@@ -75,7 +75,7 @@
                     return this.$http
                 }
             }
-        },
+        }),
         data() {
             return {
                 defaultSelectedKeys: [],

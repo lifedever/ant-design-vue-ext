@@ -1,5 +1,6 @@
 <template>
     <base-container class="table-container"
+                    :title="title"
                     ref="baseRef"
                     :hide-header="hideHeader"
                     :hide-index="hideIndex"
@@ -51,16 +52,17 @@
 
 <script>
     import {clearObj} from "../util/tools";
+    import BaseProps from './base-props'
 
     export default {
         name: "TableContainer",
         components: {
         },
-        props: {
+        props: Object.assign({}, BaseProps, {
             url: String,
             dataLoading: Boolean,
+            title: String,
             tableData: Array,
-            hideHeader: Boolean,
             pageable: Boolean,
             hideIndex:{
                 type: Boolean,
@@ -93,7 +95,7 @@
                     return this.$http
                 }
             }
-        },
+        }),
         data() {
             return {
                 data: null,

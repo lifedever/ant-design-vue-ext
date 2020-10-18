@@ -1,5 +1,6 @@
 <template>
     <base-container class="split-container"
+                    v-bind="$props"
                     :hideHeader="hideHeader">
         <template v-slot:headerRight>
             <slot name="headerRight"></slot>
@@ -21,6 +22,7 @@
 
 <script>
     import Split from "../partial/split-pane/split";
+    import BaseProps from './base-props'
 
     export default {
         name: "SplitContainer",
@@ -40,13 +42,12 @@
                 this.split = this.value
             }
         },
-        props: {
-            hideHeader: Boolean,
+        props: Object.assign({}, BaseProps, {
             value: {
                 type: [String, Number],
                 default: 0.5
             }
-        },
+        }),
         methods: {
             handleMoving(e){
                 this.$emit('input', this.split);

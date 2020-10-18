@@ -1,6 +1,6 @@
 <template>
     <base-container
-        :hide-header="hideHeader"
+        v-bind="$props"
         :class="['tab-container', hideHeader? 'tab-container-hide-header': '']"
     >
         <a-tabs v-model="current" :animated="false" @change="tabChange" :tabPosition="tabPosition">
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+    import BaseProps from './base-props'
 
     export default {
         name: "TabContainer",
@@ -32,14 +33,13 @@
             this.current = this.$route.query._t || this.defaultTab
             this.routeTab()
         },
-        props: {
+        props: Object.assign({}, BaseProps, {
             defaultTab: [String, Number],
-            hideHeader: Boolean,
             tabPosition: {
                 type: String,
                 default: 'top'
             }
-        },
+        }),
         watch: {
             '$route'(value) {
                 if (value.name === this.routeName && this.$route.query._t) {
