@@ -1,6 +1,6 @@
 {
     "name": "ant-design-vue-ext",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "license": "MIT",
     "scripts": {
         "serve": "vue-cli-service serve",
@@ -45,5 +45,7 @@
         "last 2 versions",
         "not dead"
     ],
-    "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    }
 }
