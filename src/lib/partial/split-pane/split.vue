@@ -30,7 +30,7 @@
 </template>
 
 <script>
-    import {oneOf, on, off} from '@/lib/util/tools'
+    import {oneOf, on, off} from '../../util/tools'
     import Trigger from './trigger.vue'
 
     export default {
