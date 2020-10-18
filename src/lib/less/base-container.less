@@ -1,8 +1,10 @@
 @import "~ant-design-vue/lib/style/themes/default";
+
 @ext-header-height: 48px;
 .base-container {
     height: 100%;
     flex: 1;
+
     .ant-layout-header {
         background: #fff;
         padding: 0 @padding-md;
@@ -12,24 +14,30 @@
         display: flex;
         align-items: center;
         flex-direction: row;
+
         .base-container-header-left {
             flex: 1;
         }
+
         .base-container-header-right {
             width: auto;
             text-align: right;
         }
     }
+
     .ant-layout-content {
         background: #ffffff;
         padding: @padding-md;
         overflow-y: auto;
+
         &.bg-transparent {
             background: transparent;
         }
+
         &.no-pad {
             padding: 0;
         }
+
         .content-wrapper {
             flex: 1;
             display: flex;
@@ -37,6 +45,7 @@
             height: 100%;
         }
     }
+
     .ant-layout-footer {
         border-top: 1px solid @border-color-split;
         background: #fff;

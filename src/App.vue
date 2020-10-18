@@ -55,6 +55,11 @@
                     name: '树布局',
                     noPad: true,
                     key: 'TreeContainer'
+                },
+                {
+                    name: '菜单布局',
+                    noPad: true,
+                    key: 'MenuContainer'
                 }
             ]
         }

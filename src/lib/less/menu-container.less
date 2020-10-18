@@ -1,0 +1,21 @@
+@import "~ant-design-vue/lib/style/themes/default";
+
+.base-container.menu-container {
+    > .ant-layout {
+        > .ant-layout-sider {
+            border-right: 1px solid @border-color-base;
+
+            .ant-menu-inline {
+                border-right: none;
+
+                .ant-menu-item::after {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-right: none;
+                }
+            }
+        }
+    }
+}
