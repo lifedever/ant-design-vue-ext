@@ -1,5 +1,6 @@
 <template>
     <base-container class="table-container"
+                    v-bind="$props"
                     :title="title"
                     ref="baseRef"
                     :hide-index="hideIndex"

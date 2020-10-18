@@ -1,5 +1,6 @@
 <template>
-    <tree-container hide-header :data="data">
+    <tree-container hide-header
+                    :data="data">
         <table-container-example/>
     </tree-container>
 </template>

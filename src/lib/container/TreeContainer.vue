@@ -1,5 +1,6 @@
 <template>
-    <split-container v-model="split">
+    <split-container v-model="split"
+                     v-bind="$props">
         <template slot="headerLeft">
             <slot name="headerLeft"></slot>
         </template>
