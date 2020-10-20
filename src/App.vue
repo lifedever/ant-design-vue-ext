@@ -1,6 +1,5 @@
 <template>
     <div id="app">
-        <s-modal />
         <base-container title="组件示例"
                         transparent
                         hide-header>

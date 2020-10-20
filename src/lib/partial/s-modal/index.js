@@ -7,6 +7,7 @@ export default {
         Vue.component('SModal', SModal)
 
         let bus = Vue.bus
+
         Vue.prototype.$openModal = (view) => {
             console.log('open modal', view)
             bus.emit('bus_openModal', view)
@@ -22,5 +23,8 @@ export default {
             view.modal = Object.assign({}, view.modal, {footer: null})
             bus.emit('bus_openModal', view)
         }
+
+        let OnceModal = Vue.extend(SModal)
+        new OnceModal().$mount()
     }
 }
