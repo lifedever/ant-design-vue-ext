@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <s-modal />
         <base-container title="组件示例"
                         transparent
                         hide-header>
@@ -22,7 +23,7 @@
             <base-container class="base-container-example"
                             :no-pad="currentMenu.noPad"
                             :title="currentMenu.name">
-                <component :is="currentMenu.key + 'Example'"></component>
+                <component :is="currentMenu.component + 'Example'"></component>
             </base-container>
         </base-container>
     </div>
@@ -39,7 +40,8 @@
             children: [
                 {
                     name: '基础布局',
-                    key: 'BaseContainer'
+                    key: 'BaseContainer',
+                    component: 'BaseContainer',
                 },
                 {
                     name: '分割布局',
@@ -49,22 +51,38 @@
                 {
                     name: '表格布局',
                     noPad: true,
-                    key: 'TableContainer'
+                    key: 'TableContainer',
+                    component: 'TableContainer'
                 },
                 {
                     name: '树布局',
                     noPad: true,
-                    key: 'TreeContainer'
+                    key: 'TreeContainer',
+                    component: 'TreeContainer',
                 },
                 {
                     name: '菜单布局',
                     noPad: true,
-                    key: 'MenuContainer'
+                    key: 'MenuContainer',
+                    component: 'MenuContainer',
                 },
                 {
                     name: '标签布局',
                     noPad: true,
-                    key: 'TabContainer'
+                    key: 'TabContainer',
+                    component: 'TabContainer',
+                }
+            ]
+        },
+        {
+            name: '组件',
+            key: 'component',
+            icon: 'project',
+            children: [
+                {
+                    name: '全局Modal',
+                    key: 'modal',
+                    component: 'ModalContainer'
                 }
             ]
         }

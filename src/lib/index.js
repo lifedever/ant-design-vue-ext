@@ -6,12 +6,13 @@ import TreeContainer from "./container/TreeContainer";
 
 import STable from "./partial/table/STable";
 import STableColumn from "./partial/table/STableColumn";
-
+import SModal from "./partial/s-modal";
 
 import './less/index.less'
 
 export default {
     install(Vue) {
+        Vue.use(SModal)
 
         Vue.component('BaseContainer', BaseContainer)
         Vue.component('SplitContainer', SplitContainer)

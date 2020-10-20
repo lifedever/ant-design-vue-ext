@@ -4,6 +4,7 @@ import TableContainerExample from "@/example/TableContainerExample";
 import TreeContainerExample from "@/example/TreeContainerExample";
 import MenuContainerExample from "@/example/MenuContainerExample";
 import TabContainerExample from "@/example/TabContainerExample";
+import ModalContainerExample from "@/example/ModalContainerExample";
 
 export default {
     install(Vue) {
@@ -13,5 +14,6 @@ export default {
         Vue.component('TreeContainerExample', TreeContainerExample)
         Vue.component('MenuContainerExample', MenuContainerExample)
         Vue.component('TabContainerExample', TabContainerExample)
+        Vue.component('ModalContainerExample', ModalContainerExample)
     }
 }

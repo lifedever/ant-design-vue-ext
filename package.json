@@ -12,8 +12,7 @@
         "axios": "^0.20.0",
         "core-js": "^3.6.5",
         "lodash": "^4.17.20",
-        "vue": "^2.6.11",
-        "vue-bus": "^1.2.1"
+        "vue": "^2.6.11"
     },
     "devDependencies": {
         "@vue/cli-plugin-babel": "^4.5.0",
@@ -44,8 +43,5 @@
         "> 1%",
         "last 2 versions",
         "not dead"
-    ],
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com/"
-    }
+    ]
 }

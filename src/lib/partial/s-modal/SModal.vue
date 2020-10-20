@@ -1,11 +1,13 @@
 <template>
     <div>
         <a-modal v-model="visible"
-                 v-if="visible"
                  @ok="handleOk"
-                 @cancel="view.cancel"
-                 v-bind="view.modal">
-            <component ref="comRef" :is="view.component" v-bind="view.props"></component>
+                 @cancel="handleCancel"
+                 v-bind="view? view.modal: {}">
+            <component v-if="visible"
+                       ref="comRef"
+                       :is="view.component"
+                       v-bind="view.props"></component>
         </a-modal>
     </div>
 </template>
@@ -65,6 +67,11 @@
             handleOk() {
                 if (this.view.ok) {
                     this.view.ok(this.$refs['comRef'])
+                }
+            },
+            handleCancel() {
+                if (this.view.cancel) {
+                    this.view.cancel()
                 }
             }
         }
