@@ -12,3 +12,4 @@ Vue.use(Lib)
 new Vue({
     render: h => h(App),
 }).$mount('#app')
+

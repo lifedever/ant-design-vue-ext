@@ -23,8 +23,5 @@ export default {
             view.modal = Object.assign({}, view.modal, {footer: null})
             bus.emit('bus_openModal', view)
         }
-
-        let OnceModal = Vue.extend(SModal)
-        new OnceModal().$mount()
     }
 }
