@@ -1,6 +1,6 @@
 {
     "name": "ant-design-vue-ext",
-    "version": "0.1.17",
+    "version": "0.1.18",
     "license": "MIT",
     "scripts": {
         "serve": "vue-cli-service serve",
