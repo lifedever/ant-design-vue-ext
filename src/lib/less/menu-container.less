@@ -4,7 +4,9 @@
     > .ant-layout {
         > .ant-layout-sider {
             border-right: 1px solid @border-color-base;
-
+            .ant-layout-sider-children {
+                overflow: auto;
+            }
             .ant-menu-inline {
                 border-right: none;
 
@@ -15,6 +17,9 @@
                     bottom: 0;
                     border-right: none;
                 }
+            }
+            .ant-menu-inline .ant-menu-item, .ant-menu-inline .ant-menu-submenu-title {
+                width: 100%;
             }
         }
     }

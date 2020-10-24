@@ -30,6 +30,38 @@ import BaseContainer from "@/lib/container/BaseContainer";
                     {
                         key: 'menu2',
                         title: '菜单2'
+                    },
+                    {
+                        key: 'menu3',
+                        title: '菜单3'
+                    },
+                    {
+                        key: 'menu4',
+                        title: '菜单4'
+                    },
+                    {
+                        key: 'menu5',
+                        title: '菜单5'
+                    },
+                    {
+                        key: 'menu6',
+                        title: '菜单6'
+                    },
+                    {
+                        key: 'menu7',
+                        title: '菜单7'
+                    },
+                    {
+                        key: 'menu8',
+                        title: '菜单8'
+                    },
+                    {
+                        key: 'menu9',
+                        title: '菜单9'
+                    },
+                    {
+                        key: 'menu10',
+                        title: '菜单10'
                     }
                 ],
                 menuConfig: {
