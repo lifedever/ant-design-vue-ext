@@ -93,7 +93,7 @@
                 default: true
             },
             httpInstance: {
-                type: Object,
+                type: [Object, Function],
                 default(){
                     return this.$http
                 }
