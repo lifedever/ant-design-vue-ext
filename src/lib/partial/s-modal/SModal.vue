@@ -4,10 +4,10 @@
                  @ok="handleOk"
                  @cancel="handleCancel"
                  v-bind="view? view.modal: {}">
-            <component v-if="visible"
+            <component v-if="comVisible"
                        ref="comRef"
                        :is="view.component"
-                       v-bind="view.props"></component>
+                       v-bind="view.props"/>
         </a-modal>
     </div>
 </template>
@@ -20,7 +20,9 @@
         data() {
             return {
                 visible: false,
-                view: null
+                view: null,
+                comVisible: false,
+                timeoutIns: null
             }
         },
         created() {
@@ -31,7 +33,17 @@
             this.$bus.on('bus_okLoadingModal', this.okLoadingModal)
         },
         watch: {
-            visible() {
+            visible(value) {
+                if (value) {
+                    this.comVisible = true
+                } else {
+                    if (this.timeoutIns) {
+                        window.clearTimeout(this.timeoutIns)
+                    }
+                    this.timeoutIns = setTimeout(() => {
+                        this.comVisible = false
+                    }, 300);
+                }
 
             }
         },

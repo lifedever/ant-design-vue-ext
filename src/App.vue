@@ -25,6 +25,7 @@
                 <component :is="currentMenu.component + 'Example'"></component>
             </base-container>
         </base-container>
+        <s-modal />
     </div>
 </template>
 
