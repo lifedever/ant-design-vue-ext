@@ -126,7 +126,7 @@
         },
         mounted() {
             if (this.tableData) {
-                this.initData()
+                this.initData();
             }else{
                 this.loadData();
             }
@@ -163,7 +163,7 @@
             },
             loadData(params) {
                 if (!this.httpInstance) {
-                    console.warn('请定义http请求实例：httpInstance')
+                    console.warn('[TableContainer] warning: 请设置 "httpInstance" 属性！')
                     return false
                 }
                 this.loading = true;
