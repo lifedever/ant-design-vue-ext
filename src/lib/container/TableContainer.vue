@@ -196,7 +196,7 @@
             computedTableHeight() {
                 this.$nextTick(() => {
                     this.tableHeight = this.$refs['baseRef'].$refs['contentRef'].$el.clientHeight - 75
-                    if (this.tableConfig.pagination) {
+                    if (this.bindTableConfig.pagination) {
                         this.tableHeight = this.tableHeight - 32
                     }
                 })
