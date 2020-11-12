@@ -1,5 +1,5 @@
 <template>
-    <table-container hide-header :table-data="data">
+    <table-container hide-header :table-data="data" :table-config="tableConfig">
         <s-table-column title="姓名" prop="name"></s-table-column>
         <s-table-column title="性别" prop="sex"></s-table-column>
         <s-table-column title="年龄" prop="age"></s-table-column>
@@ -35,7 +35,10 @@
                         sex: '男',
                         email: 'wangwu@163.com'
                     },
-                ]
+                ],
+                tableConfig: {
+                    rowSelection: {}
+                }
             }
         }
     }

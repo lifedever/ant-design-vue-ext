@@ -11,7 +11,7 @@
         <template v-slot:headerRight>
             <slot name="headerRight"></slot>
         </template>
-        <s-table :config="tableConfig" @change="tableChange" class="table-container-s-table">
+        <s-table :config="bindTableConfig" @change="tableChange" class="table-container-s-table">
             <s-table-column title="#" prop="nickname" :width="60" align="center" :fixed="fixedIndex? 'left': null" v-if="!hideIndex">
                 <template slot-scope="{text, record, index}">
                     <div v-if="pageable">
@@ -62,6 +62,7 @@
         components: {
         },
         props: Object.assign({}, BaseProps, {
+            tableConfig: Object,
             url: String,
             dataLoading: Boolean,
             title: String,
@@ -109,19 +110,19 @@
                     current: 1,
                     pageSize: 10,
                     total: 0
-                }
+                },
             }
         },
         computed: {
-            tableConfig() {
-                return {
+            bindTableConfig() {
+                return Object.assign({}, {
                     size: 'middle',
                     dataSource: this.dataSource,
                     loading: this.tableData? this.dataLoading: this.loading,
                     rowKey: this.itemKey,
                     pagination: false,
                     indentSize: 20
-                }
+                }, this.tableConfig)
             }
         },
         mounted() {
