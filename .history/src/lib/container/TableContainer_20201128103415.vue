@@ -26,7 +26,7 @@
                 :fixed="fixedIndex ? 'left' : null"
                 v-if="!hideIndex"
             >
-                <template slot-scope="{ index }">
+                <template slot-scope="{ text, record, index }">
                     <div v-if="pageable">
                         {{
                             pagination.pageSize * (pagination.current - 1) +
@@ -47,12 +47,16 @@
                 align="center"
                 :fixed="fixedOperation ? 'right' : null"
             >
-                <template slot-scope="{ record }">
+                <template slot-scope="{ text, record }">
                     <a-button
                         size="small"
                         :disabled="record.disableEdit"
                         type="primary"
-                        @click="handleEdit(record)"
+                        @click="
+                            () => {
+                                $emit('editItem', record);
+                            }
+                        "
                         >编辑
                     </a-button>
                     &nbsp;
@@ -179,9 +183,6 @@
             }
         },
         methods: {
-            handleEdit (record) {
-                this.$emit('editItem', record);
-            },
             initData () {
                 this.dataSource = this.tableData
             },

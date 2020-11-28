@@ -52,7 +52,7 @@
                         size="small"
                         :disabled="record.disableEdit"
                         type="primary"
-                        @click="handleEdit(record)"
+                        @click="handleEdit"
                         >编辑
                     </a-button>
                     &nbsp;
