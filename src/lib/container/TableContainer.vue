@@ -174,8 +174,11 @@
                     this.loadData()
                 }
             },
-            tableData () {
-                this.initData()
+            tableData: {
+                handler () {
+                    this.initData()
+                },
+                deep: true
             }
         },
         methods: {
@@ -183,7 +186,13 @@
                 this.$emit('editItem', record);
             },
             initData () {
-                this.dataSource = this.tableData
+                if (this.pageable) {
+                    this.dataSource = this.tableData.content
+                    this.pagination.current = this.tableData.number + 1;
+                    this.pagination.pageSize = this.tableData.size
+                } else {
+                    this.dataSource = this.data
+                }
             },
             tableChange (pagination, filters, sorter) {
                 console.log('pagination', pagination)
