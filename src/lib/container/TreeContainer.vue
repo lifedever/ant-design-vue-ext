@@ -144,11 +144,19 @@
             url() {
                 this.loadData()
             },
-            selectedKeys() {
-                this.initDefaultSelectedKeys()
+            selectedKeys: {
+                handler(){
+                    this.initDefaultSelectedKeys()
+                },
+                deep: true,
+                immediate: true
             },
-            expandedKeys() {
-                this.initDefaultExpandedKeys()
+            expandedKeys: {
+                handler(){
+                    this.initDefaultExpandedKeys()
+                },
+                deep: true,
+                immediate: true
             }
         },
         methods: {
