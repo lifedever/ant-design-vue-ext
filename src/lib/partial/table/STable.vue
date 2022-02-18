@@ -13,6 +13,10 @@
     export default {
         name: "STable",
         props: {
+            autoHeight: {
+                type: [Boolean, Number],
+                default: false
+            },
             config: Object
         },
         data() {
@@ -29,7 +33,10 @@
                 this.config.rowKey = 'id'
             }
             this.parseColumns();
-            this.getScrollY()
+            if (this.autoHeight) {
+                this.getScrollY()
+                window.addEventListener('resize', this.getScrollY)
+            }
         },
         computed: {
             scrollX(){
