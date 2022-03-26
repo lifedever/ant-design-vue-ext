@@ -1,5 +1,6 @@
 {
     "name": "ant-design-vue-ext",
+    "description": "基于Ant Design Vue的扩展",
     "version": "0.1.26",
     "license": "MIT",
     "scripts": {
