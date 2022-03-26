@@ -1,7 +1,7 @@
 {
     "name": "ant-design-vue-ext",
     "description": "基于Ant Design Vue的扩展",
-    "version": "0.1.19",
+    "version": "1.0.0",
     "license": "MIT",
     "scripts": {
         "serve": "vue-cli-service serve",
