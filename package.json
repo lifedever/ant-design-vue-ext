@@ -5,8 +5,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "vite",
-    "build": "vite",
-    "lint": "vite"
+    "build": "vite build"
   },
   "dependencies": {
     "ant-design-vue": "^1.6.5",

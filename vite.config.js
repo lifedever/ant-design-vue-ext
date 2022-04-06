@@ -19,5 +19,21 @@ export default defineConfig(({}) => {
         },
       },
     },
+    build: {
+      lib: {
+        entry: path.resolve(__dirname, 'src/lib/index.js'),
+        name: 'antdx',
+        fileName: (format) => `antd-ext.${format}.js`
+      },
+      rollupOptions: {
+        // 确保外部化处理那些你不想打包进库的依赖
+        external: ['vue', 'ant-design-vue', 'axios'],
+        output: {
+          globals: {
+            vue: 'AntD_EXT'
+          }
+        }
+      }
+    }
   };
 });
