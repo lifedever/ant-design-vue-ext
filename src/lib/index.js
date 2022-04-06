@@ -1,15 +1,15 @@
-import BaseContainer from "./container/BaseContainer";
-import SplitContainer from "./container/SplitContainer";
-import TabContainer from "./container/TabContainer";
-import TableContainer from "./container/TableContainer";
-import TreeContainer from "./container/TreeContainer";
-import MenuContainer from "./container/MenuContainer";
+import BaseContainer from "@/lib/container/BaseContainer.vue";
+import SplitContainer from "@/lib/container/SplitContainer.vue";
+import TabContainer from "@/lib/container/TabContainer.vue";
+import TableContainer from "@/lib/container/TableContainer.vue";
+import TreeContainer from "@/lib/container/TreeContainer.vue";
+import MenuContainer from "@/lib/container/MenuContainer.vue";
 
-import STable from "./partial/table/STable";
-import STableColumn from "./partial/table/STableColumn";
-import SModal from "./partial/s-modal";
+import STable from "@/lib/partial/table/STable.vue";
+import STableColumn from "@/lib/partial/table/STableColumn.vue";
+import SModal from "@/lib/partial/s-modal";
 
-import './less/index.less'
+import '@/lib/less/index.less'
 
 export default {
     install(Vue) {

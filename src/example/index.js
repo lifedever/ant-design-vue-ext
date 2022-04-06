@@ -1,10 +1,10 @@
-import BaseContainerExample from "@/example/BaseContainerExample";
-import SplitContainerExample from "@/example/SplitContainerExample";
-import TableContainerExample from "@/example/TableContainerExample";
-import TreeContainerExample from "@/example/TreeContainerExample";
-import MenuContainerExample from "@/example/MenuContainerExample";
-import TabContainerExample from "@/example/TabContainerExample";
-import ModalContainerExample from "@/example/ModalContainerExample";
+import BaseContainerExample from "@/example/BaseContainerExample.vue";
+import SplitContainerExample from "@/example/SplitContainerExample.vue";
+import TableContainerExample from "@/example/TableContainerExample.vue";
+import TreeContainerExample from "@/example/TreeContainerExample.vue";
+import MenuContainerExample from "@/example/MenuContainerExample.vue";
+import TabContainerExample from "@/example/TabContainerExample.vue";
+import ModalContainerExample from "@/example/ModalContainerExample.vue";
 
 export default {
     install(Vue) {

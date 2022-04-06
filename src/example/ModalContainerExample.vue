@@ -12,7 +12,7 @@
         methods: {
             openModal() {
                 this.$openModal({
-                    component: () => import('./ExampleModal')
+                    component: () => import('./ExampleModal.vue')
                 })
             }
         }

@@ -1,5 +1,5 @@
-import EventBus from "../../util/eventBus";
-import SModal from "../s-modal/SModal";
+import EventBus from "@/lib/util/eventBus";
+import SModal from "@/lib/partial/s-modal/SModal.vue";
 
 export default {
     install: (Vue) => {

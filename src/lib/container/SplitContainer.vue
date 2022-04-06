@@ -23,7 +23,7 @@
 </template>
 
 <script>
-    import Split from "../partial/split-pane/split";
+    import Split from "@/lib/partial/split-pane/split.vue";
     import BaseProps from './base-props'
 
     export default {

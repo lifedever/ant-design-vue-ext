@@ -9,7 +9,7 @@ import BaseContainer from "@/lib/container/BaseContainer";
 </template>
 
 <script>
-    import MenuContainer from "@/lib/container/MenuContainer";
+    import MenuContainer from "@/lib/container/MenuContainer.vue";
     export default {
         name: "MenuContainerExample.vue",
         components: {MenuContainer},
