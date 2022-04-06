@@ -1,9 +1,11 @@
 {
   "name": "ant-design-vue-ext",
   "description": "基于Ant Design Vue的扩展",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "MIT",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/antd-ext.umd.js",
   "module": "./dist/antd-ext.es.js",
   "exports": {
