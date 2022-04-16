@@ -4,6 +4,7 @@ import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 import example from './example'
 import { SModal } from './lib';
+import './lib/less/index.less'
 
 Vue.config.productionTip = false
 Vue.use(Antd)
