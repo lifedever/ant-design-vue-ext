@@ -5,6 +5,7 @@ export default {
     install: (Vue) => {
         Vue.use(EventBus)
         Vue.component('SModal', SModal)
+        Vue.component('s-modal', SModal)
 
         let bus = Vue.bus
 
